@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulserasAlberto - Pulseras Artesanales de Supervivencia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1>PulserasAlberto</h1>
+                    <p class="tagline">Pulseras Artesanales de Supervivencia</p>
+                </div>
+                <div class="nav-menu">
+                    <a href="#productos" class="nav-link">Productos</a>
+                    <a href="#ubicacion" class="nav-link">Ubicación</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                    <a href="login.html" class="nav-link" id="loginLink">
+                        <i class="fas fa-user"></i> Iniciar Sesión
+                    </a>
+                    <button class="cart-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Pulseras Artesanales de Supervivencia</h2>
+            <p>Hechas a mano con amor y dedicación</p>
+            <a href="#productos" class="btn-primary">Ver Productos</a>
+        </div>
+    </section>
+
+    <!-- Sección de Productos -->
+    <section id="productos" class="products-section">
+        <div class="container">
+            <h2 class="section-title">Nuestras Pulseras</h2>
+            <div class="products-grid">
+                <!-- Pulseras Normales -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./Assets/PulseraSencilla.webp" alt="Pulsera de Supervivencia Normal">
+                        <span class="product-badge">Hecho a mano</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Pulsera de Supervivencia Normal</h3>
+                        <p class="product-description">Pulsera artesanal de paracord resistente, perfecta para actividades al aire libre. Incluye cierre de seguridad.</p>
+                        <div class="product-features">
+                            <span><i class="fas fa-check"></i> Paracord 550</span>
+                            <span><i class="fas fa-check"></i> Resistente</span>
+                            <span><i class="fas fa-check"></i> Ajustable</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">12.99€</span>
+                            <button class="btn-add-cart" onclick="addToCart('normal', 'Pulsera de Supervivencia Normal', 12.99)">
+                                <i class="fas fa-cart-plus"></i> Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pulseras Modo Pro -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./Assets/PulseraPro.webp" alt="Pulsera de Supervivencia Modo Pro">
+                        <span class="product-badge pro">PRO</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Pulsera de Supervivencia Modo Pro</h3>
+                        <p class="product-description">Pulsera premium con accesorios adicionales: brújula, silbato y pedernal. Ideal para supervivencia extrema.</p>
+                        <div class="product-features">
+                            <span><i class="fas fa-check"></i> Paracord 550</span>
+                            <span><i class="fas fa-check"></i> Con Brújula</span>
+                            <span><i class="fas fa-check"></i> Silbato</span>
+                            <span><i class="fas fa-check"></i> Pedernal</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">19.99€</span>
+                            <button class="btn-add-cart" onclick="addToCart('pro', 'Pulsera de Supervivencia Modo Pro', 19.99)">
+                                <i class="fas fa-cart-plus"></i> Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Información de Stock -->
+            <div class="stock-info">
+                <i class="fas fa-info-circle"></i>
+                <p>Todas nuestras pulseras se fabrican bajo demanda. Tiempo de elaboración: 3-5 días laborables.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Ubicación -->
+    <section id="ubicacion" class="location-section">
+        <div class="container">
+            <h2 class="section-title">Dónde Encontrarnos</h2>
+            <div class="location-content">
+                <div class="location-info">
+                    <h3>Nuestro Puesto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Calle Lagos de Coronas 40</p>
+                    <p class="location-description">Visítanos en nuestro puesto para ver las pulseras en persona y conocer más sobre nuestro trabajo artesanal.</p>
+                </div>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Calle+Lagos+de+Coronas+40,España"
+                        width="100%"
+                        height="400"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Teléfono</h3>
+                    <p><a href="tel:640841792">640 841 792</a></p>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-instagram"></i>
+                    <h3>Instagram</h3>
+                    <p><a href="https://www.instagram.com/fenix.de.azara/" target="_blank">@fenix.de.azara</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrito Lateral -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Mi Carrito</h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Tu carrito está vacío</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price" id="totalPrice">0.00€</span>
+            </div>
+            <button class="btn-checkout" onclick="checkout()">
+                <i class="fas fa-credit-card"></i> Proceder al Pago
+            </button>
+        </div>
+    </div>
+
+    <!-- Overlay del Carrito -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 PulserasAlberto - Pulseras Artesanales Hechas con Pasión</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/fenix.de.azara/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
